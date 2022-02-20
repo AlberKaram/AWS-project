@@ -1,0 +1,30 @@
+pipeline {
+    agent { label 'jenkins-agent' }
+    stages {
+        stage('Build') {
+            steps {
+                script {
+                    withCredentials([usernamePassword(credentialsId: 'docker-login', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
+                        sh """
+                            docker build -t alberkaram94/ci-cd-project .
+                            docker login -u '${USERNAME}' -p '${PASSWORD}'
+                            docker push alberkaram94/ci-cd-project
+                        """
+                    }
+
+                }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                script {
+                    withCredentials([file(credentialsId: 'k8s', variable: 'Secretfile')]) {
+                        sh """
+                            kubectl apply -f app.yml --kubeconfig=$Secretfile
+                        """
+                    }
+                }
+                }
+            }
+        }
+}
