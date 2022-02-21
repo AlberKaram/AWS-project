@@ -39,6 +39,6 @@ Using Jenkins Pipeline to connect btw Our Repo to deployment in AWS
 
 
 ### Contributors:
-|![Alber Karam](images/alber)|![Amin Khalaf](images/amin)|![Mohamed Swelam](images/swelam)|
+|![Alber Karam](images/alber.jpeg)|![Amin Khalaf](images/amin.jpg)|![Mohamed Swelam](images/swelam.jpg)|
 |:-----------------:|:-----------:|:-----------------:|
-|[Albeer Karam](https://github.com/AlberKaram)|[Amin Khalaf](https://github.com/Moatazxz)|[Mohamed Swelam](https://github.com/swelams)|
+|[Albeer Karam](https://github.com/AlberKaram)|[Amin Khalaf](https://github.com/aminkhalaf)|[Mohamed Swelam](https://github.com/swelams)|
